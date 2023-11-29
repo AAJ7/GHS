@@ -1,0 +1,38 @@
+@import "src/assets/style/global";
+
+.custom-loader {
+  width: rem(140px);
+  height: rem(140px);
+  display: grid;
+  border-radius: 50%;
+  -webkit-mask:radial-gradient(farthest-side,#0000 40%,#000 41%);
+  background:
+    linear-gradient(0deg ,#83898E80 50%,#83898EFF 0) center/8px 100%,
+    linear-gradient(90deg,#83898E40 50%,#83898EBF 0) center/100% 8px;
+  background-repeat: no-repeat;
+  animation: s3 1s infinite steps(12);
+
+  @include media-breakpoint-down(md) {
+    width: rem(120px);
+    height: rem(120px);
+  }
+
+  &::before,
+  &::after {
+    content:"";
+    grid-area: 1/1;
+    border-radius: 50%;
+    background:inherit;
+    opacity: 0.915;
+    transform: rotate(30deg);
+  }
+
+  &::after {
+    opacity: 0.83;
+    transform: rotate(60deg);
+  }
+}
+
+@keyframes s3 {
+  100% {transform: rotate(1turn)}
+}

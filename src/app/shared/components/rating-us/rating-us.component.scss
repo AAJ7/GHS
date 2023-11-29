@@ -1,0 +1,12 @@
+@import "src/assets/style/global";
+
+.modal {
+  &-body {
+    img {
+      max-width: 170px;
+      @include media-breakpoint-down(md) {
+        max-width: 130px;
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+@import "src/assets/style/global";
+
+.icons {
+  display: flex;
+  gap: 15px;
+  margin-inline-start: rem(40px);
+  flex-wrap: wrap;
+}

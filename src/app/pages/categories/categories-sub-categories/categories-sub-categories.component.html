@@ -1,0 +1,38 @@
+
+<div class="text-center">
+  <div class="row w-100">
+    <div class="col-lg-4 col-md-12 col-sm-12 text-lg-start text-md-center text-sm-center text-center">
+      <div class="p-3">
+        <h2 class="font-weight-bold display-6">{{title}}</h2>
+      </div>
+    </div>
+    <div class="col-lg-8 col-md-12 col-sm-12">
+      <div class="p-3 d-flex justify-content-center align-items-center">
+        <div class="input-group mt-lg-3">
+          <span class="input-group-text rounded-3" id="inputGroup-sizing-default"><img
+              src="../../../../assets/icons/search.png" class="w-50 m-auto" alt="..."></span>
+          <input type="text" class="form-control text-white rounded-3" placeholder="Search"
+            aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
+            (keyup)="search($any($event).target.value)">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row w-100 gy-3 justify-content-center align-items-center">
+    <div class="col-lg-3 col-md-6 col-sm-12 column" *ngFor="let Category of Categories" (click)="haveSubCategories(Category.id , Category.have_sub_categories)">
+      <div class="p-3">
+        <div class="card w-100 rounded-5 text-center">
+          <div class="m-auto w-100">
+            <img [src]="'https://dev.generalhouseservices.com/' + Category.img_path"
+              class="card-img-top w-100 rounded-5" alt="...">
+          </div>
+          <div class="card-body p-sm pt-lg w-100">
+            <h5 class="card-title text-center">{{Category.name_en}}</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,238 @@
+<div class="pt-lg pb-lg bg-white">
+  <div class="container">
+    <div class="d-flex justify-content-between border-bottom">
+      <h3>Order Details</h3>
+      <a href="javascript:void(0)">
+        <span class="fs-md text-success">Edit order</span>
+      </a>
+
+    </div>
+    <div class="d-flex justify-content-between mt-sm mb-md">
+      <h4 class="fs-md fw-medium">General House Service Company</h4>
+    </div>
+    <table class="appTable">
+      <thead>
+        <tr style="background-color: #F5EFEF">
+          <th scope="col">Name</th>
+          <th scope="col">Qty</th>
+          <th scope="col">Price</th>
+          <th scope="col">Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of [].constructor(4); let i = index">
+          <td> t-shirt black (ironing) </td>
+          <td> 1 </td>
+          <td class="fw-medium fs-xs">300 AUD</td>
+          <td> 300 AUD </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="border-bottom mt-md">
+      <div class="d-flex justify-content-between">
+        <h3>Address</h3>
+        <!-- <button class="btn btn-link mb-xs text-decoration-underline text-success btn-md" (click)="show = true">+Add New Address</button> -->
+        <button class="btn btn-link mb-xs text-decoration-underline text-success btn-md" (click)="openModal = true">+Add New Address</button>
+      </div>
+      <p class="mb-xs mt-xs fs-sm">Please add a new address in Maadi to process the request</p>
+    </div>
+    <div class="payment mt-md">
+      <h3 class="mb-xs">Payment Details</h3>
+      <div class="bg-light p-md">
+        <div class="d-flex justify-content-between">
+          <h5 class="fw-medium">do you have promo code ?</h5>
+          <div class="d-flex">
+            <input type="text" placeholder="Enter promo code" class="form-control rounded-3 form-control-light me-xxs">
+            <button class="btn btn-outline-primary">Apply</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <h3 class="mb-xs mt-md">Total order :</h3>
+        <div class="mt-sm">
+          <label class="d-block p-xs w-100 cursor">
+            <div class="form-check">
+              <input type="radio" class="form-check-input" name="payment" checked>
+              <span class="form-check-label fs-sm">Credit Card</span>
+              <svg-icon src='assets/icons/credit-card.svg' class="fs-md ms-xs"></svg-icon>
+            </div>
+          </label>
+          <label class="d-block p-xs w-100 cursor mt-sm">
+            <div class="form-check">
+              <input type="radio" class="form-check-input" name="payment">
+              <span class="form-check-label fs-sm">Cach</span>
+              <svg-icon src='assets/icons/money.svg' class="fs-md ms-xs"></svg-icon>
+            </div>
+          </label>
+        </div>
+      </div>
+      <div class="col-md-6"></div>
+    </div>
+    <hr/>
+    <div class="row">
+      <div class="col">
+        <h3 class="mb-xs mt-md me-auto">Delivery Details :</h3>
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-12">
+            <select class="form-select rounded-3 p-sm mb-md" aria-label="Default select example">
+              <option selected disabled>Pickup Date</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-12">
+            <select class="form-select rounded-3 p-sm mb-md" aria-label="Default select example">
+              <option selected disabled>Pickup Date</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-12">
+            <select class="form-select rounded-3 p-sm mb-md" aria-label="Default select example">
+              <option selected disabled>Transportation Period</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-12">
+            <select class="form-select rounded-3 p-sm mb-md" aria-label="Default select example">
+              <option selected disabled>Transportation Period</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-12">
+            <select class="form-select rounded-3 p-sm mb-md" aria-label="Default select example">
+              <option selected disabled>Pickup Driver</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-12">
+            <select class="form-select rounded-3 p-sm mb-md" aria-label="Default select example">
+              <option selected disabled>Delivery Driver</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="row m-0">
+        <div class="col-md-6 p-0">
+          <h3 class="mb-xs mt-md me-auto">Special Instructions <img src="../../../assets/icons/plus.png" alt=""></h3>
+        </div>
+        <div class="col-md-12">
+          <textarea class="form-control rounded-3" placeholder="Write Your Instruction" rows="5"></textarea>
+        </div>
+      </div>
+    </div>
+    <div class="mt-sm text-center">
+      <button class="btn btn-light-success btn-lg" [routerLink]="['/orders/order-details']">Confirm Order</button>
+    </div>
+  </div>
+</div>
+
+<!-- <app-address-modal [show]="show" (hideModal)="show=$event"></app-address-modal> -->
+
+
+
+<div class="modal fade d-block mt-sm" tabindex="-1" *ngIf="openModal">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title">Add New Address</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="openModal = false"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-lg-6">
+            <h4 class="underLine">Contact Information</h4>
+            <div class="input-group mb-3">
+              <input type="text" class="form-control rounded-3 p-sm mb-md" placeholder="Phone Number | +20" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+            </div>
+          </div>
+          <div class="col-lg-6 text-end">
+            <h4 style="color: #3777A2; cursor: pointer;" (click)="Map()">Select Location From Map</h4>
+            <div class="input-group mb-3">
+              <input type="text" class="form-control rounded-3 p-sm mb-md" placeholder="Land Line (optional)" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12">
+            <h4 class="underLine">Delivery Address</h4>
+          </div>
+          <div class="col-lg-6 mb-sm">
+          <div class="row d-flex justify-content-around align-items-center">
+            <div class="icon d-flex flex-column justify-content-center align-items-center" (click)="locationType('apartment')">
+              <img src="../../../assets/icons/apartment.png" class="w-75" alt="png">
+              <p class="m-0">Apartment</p>
+            </div>
+            <div class="icon d-flex flex-column justify-content-center align-items-center" (click)="locationType('house')">
+              <img src="../../../assets/icons/garage.png" class="w-75" alt="png">
+              <p class="m-0">House</p>
+            </div>
+            <div class="icon d-flex flex-column justify-content-center align-items-center" (click)="locationType('office')">
+              <img src="../../../assets/icons/network.png" class="w-75" alt="png">
+              <p class="m-0">Office</p>
+            </div>
+          </div>
+          </div>
+          <div class="col-lg-6 mb-sm">
+            <div class="input-group">
+              <input type="text" class="form-control rounded-3 p-sm" placeholder="Detailed address" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+            </div>
+          </div>
+          <div class="col-lg-6 mb-sm">
+            <div class="input-group">
+              <input type="text" class="form-control rounded-3 p-sm" placeholder="street name" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+            </div>
+          </div>
+          <div class="col-lg-6 mb-sm">
+            <div class="input-group">
+              <input type="text" class="form-control rounded-3 p-sm" placeholder="Building" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+            </div>
+          </div>
+          <div class="col-lg-6 mb-sm">
+            <div class="input-group">
+              <input type="text" class="form-control rounded-3 p-sm" placeholder="floor" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+            </div>
+          </div>
+          <div class="col-lg-6 mb-sm">
+            <div class="input-group">
+              <input type="text" class="form-control rounded-3 p-sm" placeholder="Apartment number" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+            </div>
+          </div>
+          <div class="col-lg-6 mb-sm">
+            <div class="input-group">
+              <input type="text" class="form-control rounded-3 p-sm" placeholder="Additional instructions (optional)" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+            </div>
+          </div>
+          <div class="col-lg-6 mb-sm text-center">
+            <button class="btn btn-success w-100 h-100" type="submit">Save the address</button>
+          </div>
+          <div class="col-lg-12 mt-lg" *ngIf="showMap">
+            <agm-map [latitude]="30.044420" [longitude]="31.235712" (mapClick)="mapClick($event)">
+              <agm-marker [latitude]="item.lat" [longitude]="item.lng" *ngFor="let item of markers"></agm-marker>
+            </agm-map>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer"></div>
+    </div>
+  </div>
+</div>

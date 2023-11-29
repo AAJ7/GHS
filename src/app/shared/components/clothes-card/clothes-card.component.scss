@@ -1,0 +1,37 @@
+@import "src/assets/style/global";
+
+.clothesCard {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  overflow: hidden;
+  background: $white;
+  border-radius: 20px;
+  @include padding(16px);
+
+  &-header {
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+    &-thumb {
+      transition: 0.3s ease-in;
+      display: block;
+    }
+  }
+  &-title {
+    @include font-size(24px);
+    margin-bottom: 0.5em;
+    transition: 0.25s ease-in-out;
+    font-weight: $font-weight-normal;
+    text-align: center
+  }
+  &:hover {
+    .clothesCard {
+      &-header {
+        &-thumb {
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+}

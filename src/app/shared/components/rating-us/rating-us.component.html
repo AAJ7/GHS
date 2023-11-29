@@ -1,0 +1,54 @@
+<div class="modal fade show d-block " tabindex="-1" *ngIf="show" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered ">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-md fw-medium">Rate Us To Get More Offer</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="close()"></button>
+      </div>
+      <div class="modal-body">
+        <div class="d-flex flex-column justify-content-center align-items-center">
+          <img src="assets/images/smiley.png" alt="image" class="img-fluid" loading="lazy">
+        </div>
+        <div class="mt-sm mb-sm">
+          <div class="d-flex align-items-center justify-content-between mb-xxs">
+            <span class="fs-sm">Experience :</span>
+            <bar-rating class="star" [max]="5"></bar-rating>
+          </div>
+          <div class="d-flex align-items-center justify-content-between mb-xxs">
+            <span class="fs-sm">Clothes :</span>
+            <bar-rating class="star" [max]="5"></bar-rating>
+          </div>
+          <div class="d-flex align-items-center justify-content-between mb-xxs">
+            <span class="fs-sm">Cleaning :</span>
+            <bar-rating class="star" [max]="5"></bar-rating>
+          </div>
+          <div class="d-flex align-items-center justify-content-between mb-xxs">
+            <span class="fs-sm">Washing :</span>
+            <bar-rating class="star" [max]="5"></bar-rating>
+          </div>
+          <div class="d-flex align-items-center justify-content-between mb-xxs">
+            <span class="fs-sm">Delivery :</span>
+            <bar-rating class="star" [max]="5"></bar-rating>
+          </div>
+        </div>
+        <form>
+          <div class="mb-xs">
+            <div class="icons-input">
+              <textarea
+                class="form-control"
+                cols="20"
+                rows="5"
+                name="comment"
+                placeholder="Write Your Comment Here"
+              ></textarea>
+            </div>
+            <button type="button" class="btn btn-success w-100 mt-md">Send</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-backdrop fade show" *ngIf="show" (click)="close()"></div>
+

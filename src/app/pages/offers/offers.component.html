@@ -1,0 +1,84 @@
+<div class="pt-lg pb-lg bg-secondary">
+  <div class="container">
+    <section>
+      <swiper [config]="swiperConfig">
+
+        <!-- *ngFor="let item of [].constructor(6)" -->
+        <ng-template swiperSlide *ngFor="let item of SliderOffers">
+          <a target="_blank" class="d-block mt-col">
+            <img [src]="'https://dev.generalhouseservices.com/' + item" class="w-100" alt="offers">
+          </a>
+        </ng-template>
+      </swiper>
+    </section>
+  </div>
+</div>
+<div class="pt-lg pb-lg bg-light-danger">
+  <div class="container">
+    <div class="d-flex align-items-center justify-content-between">
+      <div class="d-flex justify-content-center flex-grow-1">
+        <button class="btn btn-lg offer-btn-danger">{{"shared.exclusiveDeals" | translate}}</button>
+      </div>
+      <a class="btn btn-white">
+        <span>{{"shared.viewAll" | translate}}</span>
+        <svg-icon *appIsEnLang src='assets/icons/arrow-end.svg' class="ms-xxs fs-md"></svg-icon>
+        <svg-icon *appIsArLang src='assets/icons/arrow-end.svg' class="ms-xxs fs-md rotate"></svg-icon>
+      </a>
+    </div>
+    <section class="mt-lg mb-lg">
+      <div class="row">
+        <div class="col-12 col-md-6 col-lg-4 col-xl-4 mt-col" *ngFor="let item of [].constructor(3); let i = index">
+          <app-offer-card></app-offer-card>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+<div class="pt-lg pb-lg bg-secondary">
+  <div class="container">
+    <div class="d-flex align-items-center justify-content-between">
+      <div class="d-flex justify-content-center flex-grow-1">
+        <button class="btn btn-lg offer-btn-danger">{{"shared.popularProducts" | translate}}</button>
+      </div>
+      <a class="btn btn-white">
+        <span>{{"shared.viewAll" | translate}}</span>
+        <svg-icon *appIsEnLang src='assets/icons/arrow-end.svg' class="ms-xxs fs-md"></svg-icon>
+        <svg-icon *appIsArLang src='assets/icons/arrow-end.svg' class="ms-xxs fs-md rotate"></svg-icon>
+      </a>
+    </div>
+    <section class="mt-lg mb-lg">
+      <div class="row">
+        <div class="col-12 col-md-6 col-lg-4 col-xl-4 mt-col" *ngFor="let item of [].constructor(3); let i = index">
+          <app-offer-card></app-offer-card>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+<div class="pt-lg pb-lg">
+  <div class="container">
+    <div class="d-flex align-items-center justify-content-center">
+      <button class="btn btn-lg offer-btn-danger">{{"shared.exlcusive" | translate}}</button>
+    </div>
+    <div class="mt-lg mb-lg">
+      <div class="row align-items-center justify-content-between">
+        <div class="col-12 col-md-6">
+          <img src="assets/images/service-logo.png" alt="image" class="img-fluid" loading="lazy">
+          <p class="mt-sm fs-sm">{{"shared.newService" | translate}}</p>
+          <p class="fs-sm" style="line-height: 1.6;">{{"shared.introducing" | translate}}<br>
+            {{"shared.ordering" | translate}}
+          </p>
+          <div>
+            <img src="assets/images/apple-logo.png" alt="image" class="img-fluid me-sm" loading="lazy" width="130">
+            <img src="assets/images/google-logo.png" alt="image" class="img-fluid me-sm" loading="lazy" width="130">
+          </div>
+        </div>
+        <div class="col-12 col-md-6 order-lg">
+          <img src="assets/images/reward.png" alt="image" class="img-fluid">
+          <div class="mb-lg d-lg-none"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

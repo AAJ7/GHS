@@ -1,0 +1,38 @@
+<section class="pt-xl pb-lg">
+  <div class="container">
+    <div class="row justify-content-between">
+      <div class="col-md-6 mt-lg">
+        <!-- <h4 class="fs-lg mb-md">Genral house service</h4>
+        <h2 class="fs-xxl mb-lg">
+          {{"home.care" | translate}} <br> {{"home.yourHouse" | translate}}
+        </h2> -->
+        <h4 class="fs-lg mb-md">{{title}}</h4>
+        <h2 class="fs-xxl mb-lg">
+         {{content}}
+        </h2>
+        <a [routerLink]="['/offers']" class="btn btn-primary btn-lg w-50" title="OFFERS" *ngIf="button">
+          <span>{{button}}</span>
+        </a>
+      </div>
+      <div class="col-md-6 order-lg">
+        <!-- <swiper [config]="swiperFullConfig">
+          <ng-template swiperSlide *ngFor="let item of [].constructor(5) ; let i = 'index+1'">
+            <a [routerLink]="['/']" title="abc">
+              <app-image src="assets/images/offer-img.png" ratio=" rounded"></app-image>
+            </a>
+          </ng-template>
+        </swiper> -->
+        <swiper [config]="swiperFullConfig">
+          <ng-template swiperSlide *ngFor="let item of slider_images ; let i = 'index+1'">
+            <a [routerLink]="['/']" title="abc">
+              <app-image [src]="'https://dev.generalhouseservices.com/' + item.img_path" ratio=" rounded"></app-image>
+            </a>
+          </ng-template>
+        </swiper>
+      </div>
+    </div>
+  </div>
+</section>
+<ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "medium" color = "#D6E3EC" type = "square-jelly-box" [fullScreen] = "true"><p style="color: white" > Loading... </p></ngx-spinner>
+
+

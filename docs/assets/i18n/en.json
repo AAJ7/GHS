@@ -1,0 +1,100 @@
+{
+  "header": {
+    "home": "Home",
+    "categories": "Categories",
+    "services": "Services",
+    "offers": "Offers",
+    "contact": "Contact",
+    "about": "About",
+    "singUp": "Sign up",
+    "login": "Log in",
+    "logOut": "Log out"
+  },
+  "sidebar": {
+    "hello": "Hello",
+    "ahmed": "Ahmed",
+    "trending": "Trending",
+    "sellers": "Best sellers",
+    "easy": "Easy Order",
+    "relases": "New Relases",
+    "category": "Shop By Category",
+    "products": "Products",
+    "companies": "Companies",
+    "subServices": "Sub Services",
+    "seeAll": "See all",
+    "dealing": "Dealing",
+    "deals": "Today's Deals",
+    "settings": "Help & Settings",
+    "account": "Your Account",
+    "help": "Help",
+    "signOut": "Sign Out"
+  },
+  "footer": {
+    "connect": "Connect with general house service",
+    "egypt": "Egypt",
+    "terms": "2022 General House Service .Featured Product available at participating locations only . All right reserved. Terms & conditions apply."
+  },
+  "home": {
+    "offers": "Offers",
+    "care": "We care",
+    "yourHouse": "about your house"
+  },
+  "search": {
+    "search": "Search",
+    "helpToFind": "What can we help to find?"
+  },
+  "shared": {
+    "cleaningCarpets": "Cleaning carpets",
+    "companies": "Companies",
+    "forWashing": "For washing all kinds of clothes",
+    "contactUs": "Contact Us",
+    "message": "Message",
+    "contact": "Contact",
+    "exclusiveDeals": "Exclusive Deals",
+    "viewAll": "View All",
+    "popularProducts": "Popular Products",
+    "exlcusive": "Exlcusive",
+    "newService": "Try Our New Service",
+    "introducing": "introducing the all new 'Genral house service' app",
+    "ordering": "for easy ordering and great exclusive deals.",
+    "ramadan": "My Ramadan Pacakge",
+    "t-shirts": "2 T-Shirt + 5 socks",
+    "add": "Add",
+    "eg": "EG",
+    "products": "Products",
+    "services": "Services",
+    "wool": "Wool",
+    "subServices": "Sub Services"
+  },
+  "about": {
+    "title": "Welcome to Genral house service . we're glad and grateful you're here",
+    "desc": "Welcome to Genral house service . we're glad and grateful you're hereWelcome to Genral house service . we're glad and grateful you're hereWelcome to Genral house service . we're glad and grateful you're hereWelcome to Genral house service . we're glad and grateful you're hereWelcome to Genral house service . we're glad and grateful you're hereWelcome to Genral house service . we're glad and grateful you're hereWelcome to Genral house service . we're glad and grateful you're hereWelcome to Genral house service . we're glad and grateful you're hereWelcome to Genral house service . we're glad and grateful you're hereWelcome to Genral house service . we're glad and grateful you're hereWelcome to Genral house service . we're glad and grateful you're hereWelcome to Genral house service . we're glad and grateful you're hereWelcome to Genral house service . we're glad and grateful you're hereWelcome to Genral house service . we're glad and grateful you're"
+  },
+  "auth": {
+    "updateProfile": "Update Profile",
+    "name": "Name",
+    "number": "Number",
+    "email": "Email",
+    "age": "Age",
+    "country": "Country",
+    "select": "Select your country",
+    "address": "Address",
+    "password": "Password",
+    "confirmPassword": "Confirm password",
+    "gender": "Gender",
+    "male": "Male",
+    "female": "Female",
+    "update": "Update",
+    "userLogin": "User Login",
+    "remember": "Remeber me",
+    "forgotPassword": "Forgot password ?",
+    "login":"Log in",
+    "register": "Register",
+    "signUp": "Sign up",
+    "alreadyHaveAcc": "Already have an account ?",
+    "forgetPass": "Forget Your Password ?",
+    "resetPass": "Reset Password",
+    "back": "Back To Sign in",
+    "enterEmail": "please enter your email"
+  }
+}

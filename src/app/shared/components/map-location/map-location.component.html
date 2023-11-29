@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="col-lg-12">
+    <agm-map
+      *ngIf="marker"
+      [latitude]="marker.lat"
+      [longitude]="marker.lng"
+      [scrollwheel]="true"
+      [zoom]="marker.zoom"
+      (mapClick)="mapClicked($event)"
+    >
+      <agm-marker
+        [latitude]="marker.lat"
+        [longitude]="marker.lng"
+        [markerDraggable]="marker.draggable"
+      ></agm-marker>
+    </agm-map>
+  </div>
+</div>
+

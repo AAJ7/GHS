@@ -1,0 +1,24 @@
+<div class="pt-lg m-auto content">
+  <div class="row mb-lg">
+    <div class="col-lg-4"><h2 class="font-weight-bold display-6">{{title}}</h2></div>
+    <div class="col-lg-8">
+      <div class="input-group mt-3">
+        <span class="input-group-text rounded-start" id="inputGroup-sizing-default"><img src="../../../../assets/icons/search.png" class="w-50 m-auto" alt="..."></span>
+        <input type="text" class="form-control text-white" placeholder="Search" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" (keyup)="search($any($event).target.value)">
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-start">
+    <div class="col-lg-4 col-md-6 col-sm-12 mb-lg column" *ngFor="let company of Companies">
+      <div class="card w-100 rounded-5 text-center">
+       <div class="m-auto w-100" (click)="products(company.category_id , company.company_id , company.name_ar)">
+        <img [src]="'https://dev.generalhouseservices.com/' + company.logo_path" class="card-img-top w-100 rounded-5" alt="...">
+       </div>
+        <div class="card-body p-sm pt-lg w-100 d-flex flex-column justify-content-center align-items-center">
+          <h5 class="card-title mb-sm">{{company.name_ar}}</h5>
+          <ngx-stars [readonly]="false" [size]="2" [maxStars]="5" [color]="'gold'" [initialStars]="rateCount" (ratingOutput)="onRatingSet($event)"></ngx-stars>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

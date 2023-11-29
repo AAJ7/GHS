@@ -1,0 +1,26 @@
+@import "src/assets/style/global";
+
+.modal {
+  &-dialog {
+    max-width: 650px;
+  }
+  &-header {
+    align-items: initial;
+  }
+  &-body {
+    padding: rem(32px);
+    border-bottom: 1px solid #dee2e6;
+  }
+  &-img {
+    min-width: 80px;
+  }
+  &-company {
+    background: #D6E3EC;
+    padding: rem(20px);
+    border-radius: 10px;
+    text-align: center;
+  }
+  &-details {
+    padding: rem(32px);
+  }
+}

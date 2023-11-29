@@ -1,0 +1,44 @@
+<div class="pt-lg m-auto content">
+  <div class="row mb-lg">
+    <div class="col-lg-4"><h2 class="font-weight-bold display-6">{{title}}</h2></div>
+    <div class="col-lg-8">
+      <div class="input-group mt-3">
+        <span class="input-group-text rounded-start" id="inputGroup-sizing-default"><img src="../../../../assets/icons/search.png" class="w-50 m-auto" alt="..."></span>
+        <input type="text" class="form-control text-white" placeholder="Search" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" (keyup)="search($any($event).target.value)">
+      </div>
+    </div>
+  </div>
+
+  <button type="button" class="btn btn-primary" (click)="openModal = true">Primary</button>
+  <!-- <div class="row justify-content-start">
+    <div class="col-lg-4 col-md-6 col-sm-12 mb-lg column" *ngFor="let Category of Products">
+      <div class="card w-100 rounded-5 text-center">
+       <div class="m-auto w-100">
+        <img [src]="'https://dev.generalhouseservices.com/' + Category.img_path" class="card-img-top w-100 rounded-5" alt="...">
+       </div>
+        <div class="card-body p-sm pt-lg w-100">
+          <h5 class="card-title text-center">{{Category.name_en}}</h5>
+        </div>
+      </div>
+    </div>
+  </div> -->
+</div>
+
+
+<div class="modal fade d-block mt-sm" tabindex="-1" *ngIf="openModal">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">
+          <div></div>
+        </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="openModal = false"></button>
+      </div>
+      <div class="modal-body">
+
+      </div>
+      <div class="modal-footer"></div>
+    </div>
+  </div>
+</div>
+

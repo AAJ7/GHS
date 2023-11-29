@@ -1,0 +1,41 @@
+@import "src/assets/style/global";
+
+.cartCard {
+  display: flex;
+  align-items: center;
+  @include padding(16px);
+  border-top: 1px solid #D6E3EC;
+
+  @include media-breakpoint-down(md) {
+    flex-direction: column;
+    align-items: start;
+    .cartCard {
+      &-footer {
+        padding: 0 rem(10px);
+        width: auto;
+        flex: auto;
+        margin-top: rem(15px);
+      }
+    }
+  }
+
+  &-header {
+    width: rem(120px);
+    flex: 0 0 rem(120px);
+    display: block;
+  }
+
+  &-body {
+    width: 100%;
+    padding: 0 rem(10px);
+    span {
+      color: #9C9C9C;
+    }
+    select {
+      max-width: rem(170px);
+    }
+    a:nth-child(2) {
+      border-inline-start: 1px solid #C5BBBB;
+    }
+  }
+}

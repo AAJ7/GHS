@@ -1,0 +1,89 @@
+<div class="modal fade show d-block" tabindex="-1" *ngIf="show" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-md fw-medium" id="exampleModalLabel">Add New Address</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="close()"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-md">
+          <!-- <h2 class="fs-sm fw-medium mb-sm">Contact Information</h2> -->
+          <div class="row">
+            <div class="col-md-6">
+              <div class="mb-sm">
+                <label for="phone" class="form-label">Phone number</label>
+                <input type="text" class="form-control" name="phone"/>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="mb-sm">
+                <label for="Land" class="form-label">Land line</label>
+                <input type="text" class="form-control" name="Land"/>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="mb-xs">
+                <label class="form-label">Location</label>
+                <div class="icons-input">
+                  <span class="icons-input-start">
+                    <svg-icon src='assets/icons/location.svg'></svg-icon>
+                  </span>
+                  <span (click)="showMap = true" class="form-control" role="button">Select on map</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="mb-xs">
+                <label for="Street" class="form-label">Street name</label>
+                <input type="text" class="form-control" name="Street"/>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="mb-xs">
+                <label for="Floor" class="form-label">Floor</label>
+                <input type="text" class="form-control" name="Floor"/>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="mb-xs">
+                <label for="Building" class="form-label">Building</label>
+                <input type="text" class="form-control" name="Building"/>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="mb-xs">
+                <label for="Apartment" class="form-label">Apartment number</label>
+                <input type="text" class="form-control" name="Apartment"/>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="mb-xs">
+                <label for="instructions" class="form-label">Additional instructions</label>
+                <textarea
+                  class="form-control"
+                  cols="20"
+                  rows="5"
+                  name="instructions"
+                ></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button type="button" class="btn btn-light-success me-xs">Save Address</button>
+        <button type="button" class="btn btn-link" (click)="close()">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal-backdrop fade show" *ngIf="show" (click)="close()"></div>
+
+
+<app-map-modal
+  *ngIf="showMap"
+  [showMap]="showMap"
+  (hideModal)="showMap=$event"
+>
+</app-map-modal>

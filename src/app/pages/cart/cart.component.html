@@ -1,0 +1,44 @@
+<div class="pt-lg pb-lg bg-white">
+  <div class="container">
+    <div class="mb-lg">
+      <h3 class="fs-lg mb-xs">shopping cart</h3>
+      <a href="javascript:void(0)">
+        <span class="fs-sm text-success">Delete all items</span>
+      </a>
+    </div>
+    <div class="cartCard mb-sm" *ngFor="let item of [].constructor(4); let i = index">
+      <div class="cartCard-header mb-xxs">
+        <a href="javascript:void(0)">
+          <app-image alt="Service image" [src]="'assets/images/shirt.png'" ratio="is-2-2"></app-image>
+        </a>
+      </div>
+      <div class="cartCard-body">
+        <div class="mb-xxs d-flex">
+          <h4 class="fs-md">t-shirt Cleaning</h4>
+          <span class="ms-lg">(200 AUD)</span>
+        </div>
+        <span>General Service Company</span>
+        <div class="mt-md d-flex align-items-center">
+          <select class="form-select me-sm">
+            <option value="menu_order" selected="selected">Delivery Type</option>
+            <option value="">1-day delivery</option>
+            <option value="">2-day shipping</option>
+            <option value="">3-day shipping</option>
+          </select>
+          <a href="javascript:void(0)" [routerLink]="['/cart/cart-details']">
+            <span class="fs-sm text-success me-sm">Detalis</span>
+          </a>
+          <a href="javascript:void(0)">
+            <span class="fs-sm text-success ms-sm d-inline-flex">Delete all</span>
+          </a>
+        </div>
+
+      </div>
+      <div class="cartCard-footer" [routerLink]="['/checkout']">
+        <a href="javascript:void(0)">
+          <span class="fs-md text-success">Checkout</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

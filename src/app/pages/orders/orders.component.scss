@@ -1,0 +1,17 @@
+@import "src/assets/style/global";
+
+.appTable {
+  thead {
+    background-color: #B7BEC3;
+  }
+  tbody {
+    background-color: #D6E3EC;
+  }
+  @include media-breakpoint-down(lg) {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /* optional - improves performance on iOS devices */
+    display: block;
+    white-space: nowrap;
+    border-radius: initial;
+  }
+}

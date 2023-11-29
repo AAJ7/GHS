@@ -1,0 +1,23 @@
+<div class="productCard">
+  <div class="productCard-header">
+    <a [routerLink]="['/products/product-details']" class="productCard-header-thumb">
+      <app-image alt="Product image" src="assets/images/product.png" ratio="is-4-5"></app-image>
+    </a>
+  </div>
+  <div class="productCard-body">
+    <h4 class="productCard-title">
+      <a href="javascript:void(0)">
+        {{"shared.cleaningCarpets" | translate}}
+      </a>
+    </h4>
+    <div class="d-flex justify-content-between flex-column">
+      <p class="fw-semi mb-0">
+        <span>4500 {{"shared.eg" | translate}}</span>
+      </p>
+      <span class="productCard-rate">
+        <bar-rating [(rate)]="rate" [max]="5" [readOnly]="true"></bar-rating>
+        <span class="productCard-rate-num">(15)</span>
+      </span>
+    </div>
+  </div>
+</div>

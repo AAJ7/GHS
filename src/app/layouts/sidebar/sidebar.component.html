@@ -1,0 +1,64 @@
+<div class="sidebar">
+  <div class="sidebar-bg" (click)="SidebarService.Close()"></div>
+  <div class="sidebar-container">
+    <!-- <div class="text-center mb-md">
+      <button class="sidebar-close btn" (click)="SidebarService.Close()">
+        <svg-icon src="assets/icons/close.svg" class="fs-sm"></svg-icon>
+      </button>
+    </div> -->
+    <div class="p-xs bg-dark text-white">
+      <img class="sidebar-img me-md" src="assets/images/profile.jpg" alt="profile image">
+      <span class="fs-md">{{'sidebar.hello' | translate}}, {{'sidebar.ahmed' | translate}}</span>
+    </div>
+    <div class="p-xs sidebar-item">
+      <h3 class="fs-md">{{'sidebar.trending' | translate}}</h3>
+      <a [routerLink]="['/orders/easy-order']" class="mb-1 d-block">
+        <span>{{'sidebar.easy' | translate}}</span>
+      </a>
+      <a href="javascript:void(0)" class="mb-1 d-block">
+        <span>{{'sidebar.relases' | translate}}</span>
+      </a>
+    </div>
+    <div class="p-xs sidebar-item">
+      <h3 class="fs-md">{{'sidebar.category' | translate}}</h3>
+      <a [routerLink]="['/products']" class="mb-1 d-block" title="Products">
+        <span>{{'sidebar.products' | translate}}</span>
+      </a>
+      <a [routerLink]="['/companies']" class="mb-1 d-block" title="Companies">
+        <span>{{'sidebar.companies' | translate}}</span>
+      </a>
+      <a [routerLink]="['/sub-services']" class="mb-1 d-block" title="Sub Services">
+        <span>{{'sidebar.subServices' | translate}}</span>
+      </a>
+      <a href="javascript:void(0)" class="mb-1 d-block" title="See all">
+        <span>{{'sidebar.seeAll' | translate}}</span>
+      </a>
+    </div>
+    <div class="p-xs sidebar-item">
+      <h3 class="fs-md">{{'sidebar.dealing' | translate}}</h3>
+      <a href="javascript:void(0)" class="mb-1 d-block">
+        <span>{{'sidebar.deals' | translate}}</span>
+      </a>
+    </div>
+    <div class="p-xs sidebar-item">
+      <h3 class="fs-md">{{'sidebar.settings' | translate}}</h3>
+      <a [routerLink]="['/account/update-profile']" class="mb-1 d-block">
+        <span>{{'sidebar.account' | translate}}</span>
+      </a>
+      <a href="javascript:void(0)" class="d-flex align-items-center mb-1" (click)="changeLanguage('ar')" *ngIf="currentLang == 'en'">
+        <svg-icon class="me-xxs fs-sm" src="assets/icons/lang.svg"></svg-icon>
+        <span>Ar</span>
+      </a>
+      <a href="javascript:void(0)" class="d-flex align-items-center mb-1" (click)="changeLanguage('en')" *ngIf="currentLang == 'ar'">
+        <svg-icon class="me-xxs fs-sm" src="assets/icons/lang.svg"></svg-icon>
+        <span>En</span>
+      </a>
+      <a href="javascript:void(0)" class="mb-1 d-block">
+        <span>{{'sidebar.help' | translate}}</span>
+      </a>
+      <a href="javascript:void(0)" class="mb-1 d-block">
+        <span>{{'sidebar.signOut' | translate}}</span>
+      </a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,40 @@
+/* You can add global styles to this file, and also import other style files */
+/* Font Awesome Icons */
+@import '~@fortawesome/fontawesome-free/css/all.css';
+@import '~@fortawesome/fontawesome-free/css/fontawesome.css';
+
+/* Swiper Scss */
+@import '../node_modules/swiper/swiper.scss';
+@import '../node_modules/swiper/modules/navigation/navigation.scss';
+@import '../node_modules/swiper/modules/pagination/pagination.scss';
+
+/* Main scss */
+@import "src/assets/style/main";
+
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: #D6E3EC;
+}
+
+
+
+ngx-otp-input {
+  // .ngx-otp-input-container {
+  //   display: flex;
+  //   justify-content: center;
+  // }
+  .my-super-box-class {
+    .my-super-class {
+      background: #D6E3EC;
+      width: 50px;
+      height: 50px;
+    }
+  }
+}

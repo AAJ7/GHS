@@ -1,0 +1,29 @@
+<div class="pt-lg pb-lg position-relative">
+  <div class="container">
+    <h2 class="text-center fs-lg mb-lg">Orders</h2>
+    <table class="appTable">
+      <thead>
+        <tr>
+          <th scope="col">Order id</th>
+          <th scope="col">Description</th>
+          <th scope="col">Name</th>
+          <th scope="col">Date</th>
+          <th scope="col">Status</th>
+          <th scope="col">Total</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of [].constructor(6); let i = index">
+          <td>151235</td>
+          <td>Cleaning 3 t-shirt</td>
+          <td class="fw-medium fs-xs">General</td>
+          <td>October 3 , 2022</td>
+          <td>Completed</td>
+          <td>805 for 1 item</td>
+          <td>ReOrder</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

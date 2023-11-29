@@ -1,0 +1,68 @@
+<section class="pt-xl pb-xl position-relative">
+  <div class="container">
+    <div class="row justify-content-between">
+      <div class="col-lg-6 col-xl-5">
+        <img src="assets/images/1.png" alt="login image" class="img-fluid">
+        <div class="mb-lg d-lg-none"></div>
+      </div>
+      <div class="col-lg-6">
+        <div class="mb-lg text-center">
+          <h1 class="fs-lg">
+            {{"auth.userLogin" | translate}}
+          </h1>
+        </div>
+        <form [formGroup]="LoginForm" (ngSubmit)="login(LoginForm)">
+          <div class="mt-lg mb-sm">
+            <label for="email" class="form-label">{{"auth.email" | translate}}</label>
+            <div class="icons-input">
+              <span class="icons-input-start">
+                <svg-icon src="assets/icons/person.svg"></svg-icon>
+              </span>
+              <input type="text" class="form-control" name="email" formControlName="email"/>
+            </div>
+          </div>
+          <div class="mb-xs">
+            <label class="form-label">{{"auth.password" | translate}}</label>
+            <div class="icons-input">
+              <span class="icons-input-start">
+                <svg-icon src="assets/icons/password.svg"></svg-icon>
+              </span>
+              <span class="icons-input-end cursor">
+                <svg-icon
+                  [src]="fieldPassType? 'assets/icons/eye.svg': 'assets/icons/visibilty.svg'"
+                  (click)="fieldPassType = !fieldPassType"
+                ></svg-icon>
+              </span>
+              <input
+                [type]="fieldPassType ? 'text' : 'password'"
+                class="form-control"
+                name="password"
+                (keydown.space)="$event.preventDefault()"
+                formControlName="password"
+              />
+            </div>
+          </div>
+
+          <div class="alert alert-danger" role="alert" *ngIf="errorMessage">
+            <p>{{errorMessage}}</p>
+          </div>
+          <div class="mb-xs mt-lg d-flex align-items-center justify-content-between">
+            <div class="form-check">
+              <input type="checkbox" name="remeber" class="form-check-input">
+              <label for="remeber" class="form-check-label">{{"auth.remember" | translate}}</label>
+            </div>
+            <a [routerLink]="['/auth/forget-password']" class="text-decoration-underline">
+              {{"auth.forgotPassword" | translate}}
+            </a>
+          </div>
+          <button type="submit" class="btn btn-dark w-100 mt-md">{{"auth.login" | translate}}</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="shape">
+    <img src="assets/images/curve1.png" class="shape-top">
+  </div>
+</section>
+
+<ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "medium" color = "#D6E3EC" type = "square-jelly-box" [fullScreen] = "true"><p style="color: white" > Loading... </p></ngx-spinner>

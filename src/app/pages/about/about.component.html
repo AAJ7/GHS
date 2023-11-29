@@ -1,0 +1,27 @@
+<section class="pt-xl pb-xl about">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6" *appIsArLang>
+      </div>
+      <div class="col-lg-6 col-xl-5">
+        <!-- <div class="mt-xl">
+          <h2 class="mb-md">{{'about.title' | translate}}</h2>
+          <p class="fs-sm">
+            {{'about.desc' | translate}}
+          </p>
+        </div> -->
+        <div class="mt-xl">
+          <h2 class="mb-md">{{title}}</h2>
+          <p class="fs-sm">
+            {{content}}
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-6" *appIsEnLang>
+      </div>
+    </div>
+  </div>
+</section>
+<ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "medium" color = "#D6E3EC" type = "square-jelly-box" [fullScreen] = "true"><p style="color: white" > Loading... </p></ngx-spinner>
+
+

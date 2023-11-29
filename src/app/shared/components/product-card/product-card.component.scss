@@ -1,0 +1,46 @@
+@import "src/assets/style/global";
+
+.productCard {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  overflow: hidden;
+  background: #787878;
+  border-radius: 20px;
+  &-header {
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+    &-thumb {
+      transition: 0.3s ease-in;
+      display: block;
+    }
+  }
+  &-title {
+    @include font-size(16px);
+    margin-bottom: 0.5em;
+    transition: 0.25s ease-in-out;
+    font-weight: $font-weight-normal;
+  }
+  &-body {
+    @include padding(16px);
+  }
+  &-rate {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    &-num {
+      white-space: nowrap;
+      color: $dark;
+    }
+  }
+  &:hover {
+    .productCard {
+      &-header {
+        &-thumb {
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+}

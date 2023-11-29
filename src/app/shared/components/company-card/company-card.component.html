@@ -1,0 +1,23 @@
+<div class="companyCard">
+  <div class="companyCard-header">
+    <a href="javascript:void(0)" class="companyCard-header-thumb">
+      <app-image alt="Product image" src="assets/images/product.png" ratio="is-4-5"></app-image>
+    </a>
+  </div>
+  <div class="companyCard-body">
+    <div class="d-flex align-items-center">
+      <img src="assets/images/laundry-logo.png" alt="company image" class="companyCard-img me-xs">
+      <div>
+        <h4 class="companyCard-title mb-0">
+          <a href="javascript:void(0)">
+            {{"shared.forWashing" | translate}}
+          </a>
+        </h4>
+        <span class="companyCard-rate">
+          <bar-rating [(rate)]="rate" [max]="5" [readOnly]="true"></bar-rating>
+          <span class="companyCard-rate-num">(15)</span>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>

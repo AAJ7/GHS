@@ -1,0 +1,36 @@
+<div class="modal fade show d-block" tabindex="-1" *ngIf="show" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="d-flex">
+          <a href="javascript:void(0)" class="modal-img">
+            <app-image alt="Service image" [src]="image" ratio="is-2-2"></app-image>
+          </a>
+          <h1 class="modal-title fs-md fw-medium" id="exampleModalLabel">T-shirt black Size (M)</h1>
+        </div>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="close()"></button>
+      </div>
+      <div class="modal-body">
+        <swiper [config]="swiperConfig">
+          <ng-template swiperSlide *ngFor="let item of [].constructor(6)">
+            <a target="_blank" class="d-block modal-company fs-sm">
+              Laundry
+            </a>
+          </ng-template>
+        </swiper>
+      </div>
+      <div class="modal-details">
+        <h2 class="text-center fs-md fw-medium">
+          The distinctive ironing allows you to get the best <br>
+          shape for your appearance
+        </h2>
+        <div class="d-flex justify-content-center mt-sm">
+          <button class="btn btn-lg btn-primary">Add Order To Basket</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-backdrop fade show" *ngIf="show" (click)="close()"></div>
+

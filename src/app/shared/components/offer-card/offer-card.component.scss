@@ -1,0 +1,55 @@
+@import "src/assets/style/global";
+
+.offerCard {
+  position: relative;
+  padding: rem(15px);
+  background: $white;
+  border: 1px solid $gray-900;
+  border-radius: 20px;
+  height: 100%;
+  @include media-breakpoint-down(sm) {
+    padding: rem(5px);
+  }
+  &-header {
+    &-thumb {
+      transition: 0.3s ease;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+  }
+  &-main {
+    padding: rem(15px) rem(15px) 0;
+    @include media-breakpoint-down(sm) {
+      padding: rem(5px) rem(5px) 0;
+    }
+  }
+  &-title {
+    @include font-size(20px);
+    font-weight: $font-weight-bold;
+    @include media-breakpoint-down(sm) {
+      font-size: rem(14px);
+    }
+  }
+  &-details {
+    span {
+      display: block;
+      margin-top: rem(8px);
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+  &-btn {
+    border-radius: 20px;
+    padding: rem(10px) rem(30px);
+  }
+  &:hover {
+    .offerCard {
+      &-header {
+        &-thumb {
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+}

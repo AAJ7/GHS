@@ -1,0 +1,12 @@
+<div class="pt-lg pb-lg">
+  <div class="container">
+    <app-search [name]="'shared.companies' | translate"></app-search>
+    <div class="mt-lg mb-lg">
+      <div class="row">
+        <div class="col-12 col-md-6 col-lg-4 col-xl-4 mt-col" *ngFor="let item of [].constructor(6); let i = index">
+          <app-company-card></app-company-card>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

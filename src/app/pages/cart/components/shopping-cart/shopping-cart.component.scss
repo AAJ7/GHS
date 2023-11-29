@@ -1,0 +1,17 @@
+img {
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+h2 {
+  font-weight: bold;
+}
+@media only screen and (max-width: 992px) {
+ .content-card , h2 {
+  text-align: center;
+ }
+ img {
+  margin-bottom: 16px;
+ }
+}

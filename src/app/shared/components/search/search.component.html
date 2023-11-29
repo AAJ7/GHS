@@ -1,0 +1,18 @@
+<div class="d-flex align-items-center justify-content-between position-relative" style="z-index: 1020;">
+  <h2 class="fs-lg">{{name}}</h2>
+  <div class="search ms-lg">
+    <input class="form-control" type="text" placeholder="{{'search.helpToFind' | translate}}">
+    <button class="btn btn-dark fw-semi">
+      <svg-icon src='assets/icons/search.svg' class="fs-md"></svg-icon>
+      <span class="ms-xs d-none d-sm-inline-block">{{"search.search" | translate}}</span>
+    </button>
+    <ul class="search-results">
+      <li *ngFor="let item of [].constructor(10); let i = index">
+        <a [routerLink]="['/terms']">
+          <span class="fw-semi">{{"shared.cleaningCarpets" | translate}}</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+</div>

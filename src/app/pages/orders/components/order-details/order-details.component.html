@@ -1,0 +1,158 @@
+<div class="pt-lg pb-lg">
+  <div class="container">
+    <div class="text-center mb-xl">
+      <h1 class="fs-lg">Thanks for using General House Service</h1>
+      <div class="d-flex justify-content-center mt-lg">
+        <img src="assets/images/order-success.png" alt="success order" class="img-fluid">
+      </div>
+      <h2 class="fs-md mt-md">
+        {{currentstep == 'delivred' ? 'The product has been delivered successfully. Visit us again' : 'Your request has been received successfully' }}
+      </h2>
+    </div>
+    <div class="mb-xl">
+      <div class="trackingSteps">
+        <div class="trackingSteps-item" [class.is-active]="['requested', 'firstHero', 'laundry', 'secondHero', 'delivred'].includes(currentstep)">
+          <svg-icon class="trackingSteps-item-icon" src="assets/icons/checked.svg"></svg-icon>
+          <span class="trackingSteps-item-title">Requested Success</span>
+        </div>
+        <div class="trackingSteps-line" [class.is-active]="['requested', 'firstHero', 'laundry', 'secondHero', 'delivred'].includes(currentstep)"></div>
+        <div class="trackingSteps-item" [class.is-active]="['firstHero', 'laundry', 'secondHero', 'delivred'].includes(currentstep)">
+          <svg-icon class="trackingSteps-item-icon" src="assets/icons/checked.svg"></svg-icon>
+          <span class="trackingSteps-item-title">Hero Is On Way</span>
+        </div>
+        <div class="trackingSteps-line" [class.is-active]="['firstHero', 'laundry', 'secondHero', 'delivred'].includes(currentstep)"></div>
+        <div class="trackingSteps-item" [class.is-active]="['laundry', 'secondHero', 'delivred'].includes(currentstep)">
+          <svg-icon class="trackingSteps-item-icon" src="assets/icons/checked.svg"></svg-icon>
+          <span class="trackingSteps-item-title">Laundry Working</span>
+        </div>
+        <div class="trackingSteps-line" [class.is-active]="['laundry', 'secondHero', 'delivred'].includes(currentstep)"></div>
+        <div class="trackingSteps-item" [class.is-active]="['secondHero', 'delivred'].includes(currentstep)">
+          <svg-icon class="trackingSteps-item-icon" src="assets/icons/checked.svg"></svg-icon>
+          <span class="trackingSteps-item-title">Hero Is On Way</span>
+        </div>
+        <div class="trackingSteps-line" [class.is-active]="['secondHero', 'delivred'].includes(currentstep)"></div>
+        <div class="trackingSteps-item" [class.is-active]="currentstep == 'delivred'">
+          <svg-icon class="trackingSteps-item-icon" src="assets/icons/checked.svg"></svg-icon>
+          <span class="trackingSteps-item-title">Product Delivered</span>
+        </div>
+      </div>
+    </div>
+    <div class="mt-sm" *ngIf="currentstep == 'requested'">
+      <h3>Order Details</h3>
+      <h4 class="fs-md fw-medium text-center mt-sm mb-md">General House Service Company</h4>
+      <table class="appTable">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Qty</th>
+            <th scope="col">Price</th>
+            <th scope="col">Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of [].constructor(2); let i = index">
+            <td> t-shirt black (ironing) </td>
+            <td> 1 </td>
+            <td class="fw-medium fs-xs">300 AUD</td>
+            <td> 300 AUD </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="text-center mt-lg">
+        <h2 class="bg-gray text-center fs-md p-xs fw-medium">Payment Details</h2>
+        <div class="d-flex justify-content-center">
+          <app-payment-loader></app-payment-loader>
+        </div>
+        <h4 class="fw-medium mt-lg">Please wait for the laundry to update the price</h4>
+      </div>
+    </div>
+    <div class="mt-sm" *ngIf="currentstep == 'firstHero'">
+      <h3>Hero location</h3>
+      <div class="mt-xs">
+        <app-map-location></app-map-location>
+      </div>
+    </div>
+    <div class="mt-sm" *ngIf="currentstep == 'laundry'">
+      <h3>Order Details</h3>
+      <h4 class="fs-md fw-medium text-center mt-sm mb-md">General House Service Company</h4>
+      <table class="appTable">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Qty</th>
+            <th scope="col">Price</th>
+            <th scope="col">Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of [].constructor(2); let i = index">
+            <td> t-shirt black (ironing) </td>
+            <td> 1 </td>
+            <td class="fw-medium fs-xs">300 AUD</td>
+            <td> 300 AUD </td>
+          </tr>
+        </tbody>
+      </table>
+      <h4 class="fs-md fw-medium text-center mt-sm mb-md p-xs bg-gray">Invoice Details</h4>
+      <div class="row">
+        <div class="col-md-6">
+          <h3 class="mb-xs mt-md">Total order :</h3>
+          <div class="mt-sm">
+            <label class="d-block p-xs w-100 cursor">
+              <div class="form-check">
+                <input type="radio" class="form-check-input" name="payment" checked>
+                <span class="form-check-label fs-sm">Credit Card</span>
+                <svg-icon src='assets/icons/credit-card.svg' class="fs-md ms-xs"></svg-icon>
+              </div>
+            </label>
+            <label class="d-block p-xs w-100 cursor mt-sm">
+              <div class="form-check">
+                <input type="radio" class="form-check-input" name="payment">
+                <span class="form-check-label fs-sm">Cach</span>
+                <svg-icon src='assets/icons/money.svg' class="fs-md ms-xs"></svg-icon>
+              </div>
+            </label>
+          </div>
+          <div class="mt-lg">
+            <button class="btn btn-light-success btn-lg">Pay Now</button>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="rounded mt-md">
+            <div class="p-md">
+              <div class="d-flex align-items-center justify-content-between mb-xxs">
+                <span>Total</span>
+                <span class="fw-semi">130 AUD</span>
+              </div>
+              <div class="d-flex align-items-center justify-content-between mb-xxs">
+                <span>Delivery Fees</span>
+                <span class="fw-semi">20 AUD</span>
+              </div>
+              <div class="d-flex align-items-center justify-content-between mb-xxs">
+                <span>Tax</span>
+                <span class="fw-semi">220 AUD</span>
+              </div>
+              <div class="d-flex align-items-center justify-content-between mb-xxs">
+                <span>Total Price</span>
+                <span class="fw-semi">160 AUD</span>
+              </div>
+              <div class="d-flex align-items-center justify-content-between mb-xxs">
+                <span>Payment is cash</span>
+                <span class="fw-semi text-primary">160 AUD</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mt-sm" *ngIf="currentstep == 'secondHero'">
+      <h3>Hero location</h3>
+      <div class="mt-xs">
+        <app-map-location></app-map-location>
+      </div>
+    </div>
+    <div class="mt-sm" *ngIf="currentstep == 'delivred'">
+      <app-rating-us [show]="showRatingUs" (hideModal)="showRatingUs=$event"></app-rating-us>
+    </div>
+  </div>
+</div>

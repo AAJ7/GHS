@@ -1,0 +1,77 @@
+@import "src/assets/style/global";
+
+.trackingSteps {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &-line {
+    flex: 1 1 0%;
+    height: 1px;
+    border-top: 4px dashed #707070;
+    margin: 0 1px;
+    &.is-active {
+      border-color: #32BA7C;
+    }
+    @include media-breakpoint-down(lg) {
+      border-width: 3px;
+    }
+    @include media-breakpoint-down(sm) {
+      border-width: 2px;
+    }
+  }
+  &-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+    @include media-breakpoint-down(md) {
+      &-title {
+        max-width: 100px;
+        font-size: rem(10px);
+      }
+    }
+    &-icon {
+      cursor: pointer;
+      font-size: rem(48px);
+      @include media-breakpoint-down(md) {
+        gap: 5px;
+        font-size: rem(32px);
+      }
+      path {
+        fill: #AEB5B1 !important;
+      }
+      polygon:nth-of-type(1) {
+        fill: #727C79 !important
+      }
+    }
+    &.is-active {
+      .trackingSteps-item-icon {
+        path {
+          fill: #32BA7C !important;
+        }
+        polygon:nth-of-type(1) {
+          fill: #0AA06E !important
+        }
+      }
+      .trackingSteps-item-title {
+        color: #32BA7C;
+        font-weight: $font-weight-semi;
+      }
+    }
+  }
+}
+
+.appTable {
+  thead {
+    background-color: #B7BEC3;
+  }
+  tbody {
+    background-color: #D6E3EC;
+  }
+}
+
+label {
+  border: 1px solid;
+}

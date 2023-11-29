@@ -1,0 +1,50 @@
+<div class="modal fade show d-block" tabindex="-1" *ngIf="showMap" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-md fw-medium" id="exampleModalLabel">Change your address</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="close()"></button>
+      </div>
+      <div class="modal-body text-center">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="form-group mb-sm">
+              <input
+                placeholder="search for location"
+                autocorrect="off"
+                autocapitalize="off"
+                spellcheck="off"
+                type="text"
+                class="form-control"
+                #search
+                [formControl]="searchControl"
+              >
+            </div>
+            <agm-map
+              *ngIf="marker"
+              [latitude]="marker.lat"
+              [longitude]="marker.lng"
+              [scrollwheel]="true"
+              [zoom]="marker.zoom"
+              (mapClick)="mapClicked($event)"
+            >
+              <agm-marker
+                [latitude]="marker.lat"
+                [longitude]="marker.lng"
+                [markerDraggable]="marker.draggable"
+              ></agm-marker>
+            </agm-map>
+          </div>
+        </div>
+
+        <div class="pt-md pb-md">
+          <button type="button" class="btn btn-primary me-xs" (click)="close()">Save</button>
+          <button type="button" class="btn btn-danger" (click)="close()">Cancel</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-backdrop fade show" *ngIf="showMap" (click)="close()"></div>

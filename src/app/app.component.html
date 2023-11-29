@@ -1,0 +1,9 @@
+<div class="theApp">
+  <app-header></app-header>
+  <ng-progress #progressBar></ng-progress>
+  <div class="theApp-main">
+    <router-outlet></router-outlet>
+  </div>
+  <app-footer></app-footer>
+  <app-sidebar *ngIf="SidebarService.active"></app-sidebar>
+</div>

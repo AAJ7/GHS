@@ -1,0 +1,68 @@
+@import "src/assets/style/global";
+
+.search {
+  position: relative;
+  z-index: 2;
+  flex: 1 1 0%;
+  border-radius: $border-radius;
+
+  @include media-breakpoint-down(lg) {
+    margin: 0 rem(12px);
+  }
+  .form-control {
+    padding-right: rem(110px);
+    border-color: #a5a5a5;
+    @include media-breakpoint-down(sm) {
+      padding-right: rem(40px);
+    }
+    &:focus {
+      border-color: $primary;
+    }
+  }
+  .btn {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    padding: 0 rem(8px);
+    border-radius: 0 $border-radius $border-radius 0;
+  }
+  &-results {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    list-style-type: none;
+    padding: rem(10px) 0;
+    margin: 0;
+    background: $white;
+    box-shadow: $box-shadow-lg;
+    border-radius: 0 0 rem(10px) rem(10px);
+    min-width: rem(170px);
+    padding: rem(10px) 0;
+    z-index: $zindex-dropdown;
+    max-height: 400px;
+    opacity: 0;
+    transform: translateY(-1000vh);
+    transition: opacity 0.3s ease-in-out;
+    overflow-x: hidden;
+    overflow-y: auto;
+    @include scrollBar;
+
+    @include media-breakpoint-down(sm) {
+      max-height: 300px;
+    }
+    > li {
+      > * {
+        padding: rem(5px) rem(20px);
+        display: block;
+      }
+    }
+  }
+  > .form-control:focus {
+    &:not(:placeholder-shown) ~ .search-results {
+      opacity: 1;
+      transform: none;
+    }
+  }
+}
